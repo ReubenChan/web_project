@@ -1,131 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Certificates</title>
+  <title>Reuben Chan | Portfolio Resume</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: "Roboto", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+      background-color: #f8f9fa;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+    }
+    p, li, a {
+      font-weight: 400;
+      font-size: 16px;
+    }
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    .section-title {
+      margin-top: 40px;
+    }
+    .card {
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border: none;
+      transition: transform 0.2s ease-in-out;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card-img-top {
+      max-height: 180px;
+      object-fit: contain;
+      padding: 20px;
+    }
+    .card-body {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <h1>Licenses & Certifications</h1>
-  <hr>
 
-  <!-- Microsoft Azure Certificate -->
-  <section>
-    <div>
-      <img src="./images/microsoft_logo.jpg" height="60" alt="Microsoft Logo">
-    </div>
-    <h2>Microsoft Certified: Azure AI Fundamentals</h2>
-    <p><strong>Microsoft</strong><br>
-    Issued Jun 2024 · Expires Jun 2026<br>
-    Credential ID: AB2048D7248F284B</p>
-    <p><a href="https://learn.microsoft.com/en-us/users/reubenchan-6730/credentials/ab2048d7248f284b?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank">Show credential</a></p>
-  </section>
-
-  <hr>
-
-  <!-- VMware Certificate -->
-  <section>
-    <div>
-      <img src="./images/vmware_logo.jpg" height="60" alt="VMware Logo">
-    </div>
-    <h2>Multi-Cloud Livefire: Modern Application Dev & Ops Automation 2023</h2>
-    <p><strong>VMware</strong><br>
-    Issued Jul 2023</p>
-    <p><a href="https://www.credly.com/badges/97ca5847-f6ce-4eac-8e5c-eccc1dea86f7/linked_in_profile" target="_blank">Show credential</a></p>
-  </section>
-  <hr>
-
-  <!-- NGINX Fundamentals -->
-  <section>
-    <div>
-      <img src="images/nginx_logo.jpg" height="60" alt="NGINX Logo">
-    </div>
-    <h2>Nginx Fundamentals for Super Users</h2>
-    <p><strong>NGINX</strong><br>
-    Issued Jan 2023<br>
-    Credential ID: CLNPQYPSYF-GZLTVGHT-XSHMHHHYSW</p>
-    <p>
-      <a 
-        href="https://www.credly.com/badges/0ec7dae4-7b91-4ba3-83ef-de1271d1c312" 
-        target="_blank"
-      >
-        Show credential
-      </a>
-    </p>
-  </section>
+<!-- Certificates Section -->
+<div class="container" id="certificates">
+  <h3 class="section-title text-center">Licenses & Certifications</h3>
+  <div class="row justify-content-center">
   
-  <hr>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img src="./images/microsoft_logo.jpg" class="card-img-top" alt="Microsoft Logo">
+          <div class="card-body">
+            <h5 class="card-title">Azure AI Fundamentals</h5>
+            <p class="card-text"><strong>Microsoft</strong><br>Issued Jun 2024 · Expires Jun 2026<br>ID: AB2048D7248F284B</p>
+            <a href="https://learn.microsoft.com/en-us/users/reubenchan-6730/credentials/ab2048d7248f284b" class="btn btn-primary" target="_blank">Show Credential</a>
+          </div>
+        </div>
+      </div>
   
-  <!-- SAFe 5 Practitioner -->
-  <section>
-    <div>
-      <img src="./images/scaled_agile_inc__logo.jpg" height="60" alt="SAFe Logo">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img src="./images/vmware_logo.jpg" class="card-img-top" alt="VMware Logo">
+          <div class="card-body">
+            <h5 class="card-title">Multi-Cloud Livefire 2023</h5>
+            <p class="card-text"><strong>VMware</strong><br>Issued Jul 2023</p>
+            <a href="https://www.credly.com/badges/97ca5847-f6ce-4eac-8e5c-eccc1dea86f7/linked_in_profile" class="btn btn-primary" target="_blank">Show Credential</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img src="./images/nginx_logo.jpg" class="card-img-top" alt="NGINX Logo">
+          <div class="card-body">
+            <h5 class="card-title">Nginx Fundamentals</h5>
+            <p class="card-text"><strong>NGINX</strong><br>Issued Jan 2023<br>ID: CLNPQYPSYF-GZLTVGHT-XSHMHHHYSW</p>
+            <a href="https://www.credly.com/badges/0ec7dae4-7b91-4ba3-83ef-de1271d1c312" class="btn btn-primary" target="_blank">Show Credential</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img src="./images/scaled_agile_inc__logo.jpg" class="card-img-top" alt="SAFe Logo">
+          <div class="card-body">
+            <h5 class="card-title">SAFe® 5 Practitioner</h5>
+            <p class="card-text"><strong>Scaled Agile, Inc.</strong><br>Issued Sep 2021</p>
+            <a href="https://www.credly.com/badges/0ba501d7-3f13-4a00-a350-d023375a62fc?source=linked_in_profile" class="btn btn-primary" target="_blank">Show Credential</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img src="./images/linux.jpg" class="card-img-top" alt="Linux Logo">
+          <div class="card-body">
+            <h5 class="card-title">Linux Essentials</h5>
+            <p class="card-text"><strong>LPI</strong><br>Issued May 2021<br>ID: 96jamb83tf</p>
+            <a href="https://cs.lpi.org/caf/Xamman/certification/verify/LPI000485632/96jamb83tf" class="btn btn-primary" target="_blank">Show Credential</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img src="./images/microsoft_logo.jpg" class="card-img-top" alt="Microsoft Logo">
+          <div class="card-body">
+            <h5 class="card-title">Azure Fundamentals</h5>
+            <p class="card-text"><strong>Microsoft</strong><br>Issued May 2021</p>
+            <a href="https://www.credly.com/badges/f9a3ff9f-a2c4-477f-8619-847978d2ff60?source=linked_in_profile" class="btn btn-primary" target="_blank">Show Credential</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img src="./images/udemy_logo.jpg" class="card-img-top" alt="Udemy Logo">
+          <div class="card-body">
+            <h5 class="card-title">Python Programming Masterclass</h5>
+            <p class="card-text"><strong>Udemy</strong><br>Issued Feb 2021</p>
+            <p class="text-muted"><em>Credential link not available</em></p>
+          </div>
+        </div>
+      </div>
+  
     </div>
-    <h2>Certified SAFe® 5 Practitioner</h2>
-    <p><strong>Scaled Agile, Inc.</strong><br>
-    Issued Sep 2021</p>
-    <p>
-      <a 
-        href="https://www.credly.com/badges/0ba501d7-3f13-4a00-a350-d023375a62fc?source=linked_in_profile" 
-        target="_blank"
-      >
-        Show credential
-      </a>
-    </p>
-  </section>
-  
-  <hr>
-  
-  <!-- Linux Essentials -->
-  <section>
-    <div>
-      <img src="./images/linux.jpg" height="60" alt="LPI Logo">
-    </div>
-    <h2>Linux Essentials</h2>
-    <p><strong>Linux Professional Institute (LPI)</strong><br>
-    Issued May 2021<br>
-    Credential ID: 96jamb83tf</p>
-    <p>
-      <a 
-        href="https://cs.lpi.org/caf/Xamman/certification/verify/LPI000485632/96jamb83tf" 
-        target="_blank"
-      >
-        Show credential
-      </a>
-    </p>
-  </section>
-  <hr>
-
-  <!-- Microsoft Azure Fundamentals -->
-  <section>
-    <div>
-      <img src="./images/microsoft_logo.jpg" height="60" alt="Microsoft Logo">
-    </div>
-    <h2>Microsoft Certified: Azure Fundamentals</h2>
-    <p><strong>Microsoft</strong><br>
-    Issued May 2021</p>
-    <p>
-      <a 
-        href="https://www.credly.com/badges/f9a3ff9f-a2c4-477f-8619-847978d2ff60?source=linked_in_profile" 
-        target="_blank"
-      >
-        Show credential
-      </a>
-    </p>
-  </section>
-  
-  <hr>
-  
-  <!-- Python Programming Masterclass -->
-  <section>
-    <div>
-      <img src="./images/udemy_logo.jpg" height="60" alt="Udemy Logo">
-    </div>
-    <h2>Python Programming Masterclass</h2>
-    <p><strong>Udemy</strong><br>
-    Issued Feb 2021</p>
-    <p><em>Credential link not available</em></p>
-  </section>
-  
+  </div>
+  <footer class="container-fluid text-center" id="contact">
+    <p>Contact: <a href="mailto:reubenchan2010@hotmail.com">reubenchan2010@hotmail.com</a></p>
+  </footer>
 </body>
 </html>
