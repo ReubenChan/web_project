@@ -1,42 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> My Resume</title>
+  <title>Reuben Chan | Portfolio Resume</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <a href="index.html"><img src="./images/profile_pic.jpg" height="200" alt="Profile Picture"></a>
-  <p>
-    <a href="https://www.linkedin.com/in/reubenchanep/" target="_blank">
-      <img src="./images/linked.png" height="24" alt="LinkedIn Profile" style="vertical-align: middle;">
-      Reuben Chan
-    </a>
-  </p>
-     
-  <p>
-    <a href="education.html">Education</a> |
-    <a href="certificates.html">Certificates</a> |
-    <a href="skills.html">Skills</a> |
-    <a href="honors_lang.html">Honors & Languages</a>
-  </p>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Portfolio</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-  <h1>About me</h1>
-  <hr>
-  <p>Results-driven DevOps Engineer with over three years of experience in automating processes and managing AI Ops and infrastructure within hybrid IT environments. Proficient in utilizing automation tools and various APIs to streamline operations and enhance system performance. Proven track record of delivering innovative solutions for AI Ops and infrastructure automation, contributing to improved service continuity and operational excellence. Experienced in both technical and training roles, mentoring junior associates and managing complex projects.</p>
+<div class="jumbotron text-center">
+  <h1>Reuben Chan</h1>
+  <p>DevOps Engineer | AI Ops | Hybrid Automation</p>
+</div>
 
-  <h1>Experience</h1>
-  <hr>
+<div class="container" id="about">
+  <div class="row">
+    <div class="col-sm-3 text-center">
+      <a href="index.html"><img src="./images/profile_pic.jpg" class="img-responsive center-block profile-img" alt="Profile Picture"></a>
+    </div>
+    <div class="col-sm-9">
+      <p>
+        <a href="https://www.linkedin.com/in/reubenchanep/" target="_blank">
+          <img src="./images/linked.png" height="40px" alt="LinkedIn Profile" style="vertical-align: middle;">
+          Reuben Chan
+        </a>
+      </p>
+      <p>
+        <a href="education.html">Education</a> |
+        <a href="certificates.html">Certificates</a> |
+        <a href="skills.html">Skills</a> |
+        <a href="honors_lang.html">Honors & Languages</a>
+      </p>
+      <h3 class="section-title">About Me</h3>
+      <p>Results-driven DevOps Engineer with over three years of experience in automating processes and managing AI Ops and infrastructure within hybrid IT environments. Proficient in utilizing automation tools and various APIs to streamline operations and enhance system performance. Proven track record of delivering innovative solutions for AI Ops and infrastructure automation, contributing to improved service continuity and operational excellence. Experienced in both technical and training roles, mentoring junior associates and managing complex projects.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="experience">
+  <h3 class="section-title">Experience</h3>
 
   <section>
-    <div>
-      <img src="./images/ntt_data_inc_logo.jpg" height="100" alt="NTT Logo">
-    </div>
-    <h2>Senior Associate DevOps Engineer</h2>
-    <p><strong>Full-time | Jun 2023 - Dec 2024 (1 yr 7 mos)</strong><br>
-    Singapore · Hybrid</p>
-  
-    <ul>
+    <div><img src="./images/ntt_data_inc_logo.jpg" height="100" alt="NTT Logo"></div>
+    <h4>Senior Associate DevOps Engineer</h4>
+    <p><strong>Full-time | Jun 2023 - Dec 2024 (1 yr 7 mos)</strong><br>Singapore · Hybrid</p>
+    <ul class="custom-bullets">
       <li>Mentored interns and junior DevOps associates, fostering professional growth.</li>
       <li>Delivered PoCs for AI Ops including IT Health Check, Root Cause Analysis, and Infrastructure Automation.</li>
       <li>Developed Kubernetes automation using Intel QuickAssist Technology on Xeon processors to enhance performance.</li>
@@ -44,47 +79,43 @@
       <li>Handled Cisco compliance using Yang Model with Ansible orchestration.</li>
     </ul>
   </section>
+
   <section>
-    <div>
-      <img src="./images/generation_singapore_logo.jpg" height="100" alt="Generation Singapore Logo">
-    </div>
-    <h2>Student Intern SGUP-CT Cloud Support and DevOps</h2>
-    <p><strong>Full-time | Mar 2021 - Jan 2022 (11 mos)</strong><br>
-    Singapore</p>
-  
-    <ul>
+    <div><img src="./images/generation_singapore_logo.jpg" height="100" alt="Generation Singapore Logo"></div>
+    <h4>Student Intern SGUP-CT Cloud Support and DevOps</h4>
+    <p><strong>Full-time | Mar 2021 - Jan 2022 (11 mos)</strong><br>Singapore</p>
+    <ul class="custom-bullets">
       <li>Completed a comprehensive 3-month bootcamp followed by a 6-month apprenticeship, gaining hands-on experience in cloud support and DevOps.</li>
       <li>Acquired technical proficiency in Python, Git, Linux, Ansible, Docker, Terraform, Azure, C#, Jenkins, and Agile methodologies through project-based learning.</li>
       <li>Developed strong behavioral and mindset skills crucial for effective cloud support and DevOps performance, emphasizing teamwork, problem-solving, and continuous learning.</li>
     </ul>
   </section>
+
   <section>
-    <div>
-      <img src="./images/singapore_airlines_logo.jpg" height="100" alt="Singapore Airlines Logo">
-    </div>
-    <h2>Flight Attendant</h2>
-    <p><strong>Full-time | Aug 2012 - Feb 2021 (8 yrs 7 mos)</strong><br>
-    Singapore</p>
-  
-    <ul>
+    <div><img src="./images/singapore_airlines_logo.jpg" height="100" alt="Singapore Airlines Logo"></div>
+    <h4>Flight Attendant</h4>
+    <p><strong>Full-time | Aug 2012 - Feb 2021 (8 yrs 7 mos)</strong><br>Singapore</p>
+    <ul class="custom-bullets">
       <li>Brand ambassador for Singapore Airlines, delivering high service standards, grooming, first aid, and medical support.</li>
       <li>Awarded certificate of performance for outstanding A1 service in FY 19/20.</li>
       <li>Received honorary title ‘Service over and above the rest’ for Q4 (Oct–Dec 19/20) excellence.</li>
     </ul>
   </section>
+
   <section>
-    <div>
-      <img src="images/shangri_la_hotels_and_resorts_logo.jpg" height="100" alt="Shangri-La Group Logo">
-    </div>
-    <h2>Management Trainee Program</h2>
-    <p><strong>Full-time | Sep 2010 - Jul 2012 (1 yr 11 mos)</strong><br>
-    Federal Territory of Kuala Lumpur, Malaysia</p>
-  
-    <ul>
+    <div><img src="images/shangri_la_hotels_and_resorts_logo.jpg" height="100" alt="Shangri-La Group Logo"></div>
+    <h4>Management Trainee Program</h4>
+    <p><strong>Full-time | Sep 2010 - Jul 2012 (1 yr 11 mos)</strong><br>Federal Territory of Kuala Lumpur, Malaysia</p>
+    <ul class="custom-bullets">
       <li>Handled recruitment, interviews, compliance, training, and team-building in the Human Resource Department.</li>
       <li>Compiled and presented financial reports, budgets, commentaries, and statements in the Finance Department.</li>
     </ul>
   </section>
-  
+</div>
+
+<footer class="container-fluid text-center" id="contact">
+  <p>Contact: <a href="mailto:reubenchan2010@hotmail.com">reubenchan2010@hotmail.com</a></p>
+</footer>
+
 </body>
 </html>
