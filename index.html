@@ -5,6 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Reuben Chan | DevOps Engineer · AI Ops · Hybrid Automation</title>
   <meta name="description" content="Reuben Chan is a Singapore-based DevOps Engineer with experience in AI Ops, infrastructure automation and hybrid IT environments.">
+  <link rel="canonical" href="https://reubenchan.github.io/web_project/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f7fa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e131a" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Reuben Chan">
+  <meta property="og:title" content="Reuben Chan | DevOps Engineer · AI Ops · Hybrid Automation">
+  <meta property="og:description" content="Reuben Chan is a Singapore-based DevOps Engineer with experience in AI Ops, infrastructure automation and hybrid IT environments.">
+  <meta property="og:url" content="https://reubenchan.github.io/web_project/">
+  <meta property="og:image" content="https://reubenchan.github.io/web_project/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Reuben Chan, DevOps Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Reuben Chan",
+    "jobTitle": "DevOps Engineer",
+    "url": "https://reubenchan.github.io/web_project/",
+    "image": "https://reubenchan.github.io/web_project/images/profile_pic-480.webp",
+    "email": "mailto:reubenchan2010@hotmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Singapore",
+      "addressCountry": "SG"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/reubenchanep/",
+      "https://github.com/ReubenChan"
+    ],
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Singapore Management University"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Taylor's University"
+      }
+    ],
+    "knowsLanguage": [
+      "English",
+      "Malay",
+      "Chinese"
+    ],
+    "knowsAbout": [
+      "DevOps",
+      "AI Ops",
+      "Infrastructure Automation",
+      "Ansible",
+      "Kubernetes",
+      "Docker",
+      "Python",
+      "Infrastructure as Code"
+    ]
+  }
+  </script>
   <script>
     document.documentElement.classList.add('js');
     try {
@@ -14,6 +73,7 @@
   </script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/roboto-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" type="image/avif" imagesrcset="images/profile_pic-240.avif 240w, images/profile_pic-480.avif 480w" imagesizes="15rem" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
   <script src="js/main.js" defer></script>
 </head>
@@ -48,7 +108,10 @@
 <main id="main">
   <div class="container hero-wrap">
     <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-photo" src="images/profile_pic.jpg" width="240" height="240" alt="Portrait of Reuben Chan" fetchpriority="high">
+      <picture>
+        <source type="image/avif" srcset="images/profile_pic-240.avif 240w, images/profile_pic-480.avif 480w" sizes="15rem">
+        <img class="hero-photo" src="images/profile_pic-480.webp" srcset="images/profile_pic-240.webp 240w, images/profile_pic-480.webp 480w" sizes="15rem" width="240" height="240" alt="Portrait of Reuben Chan" fetchpriority="high">
+      </picture>
       <div>
         <h1 id="hero-title">Reuben Chan</h1>
         <p class="hero-role">DevOps Engineer · AI Ops · Hybrid Automation</p>
