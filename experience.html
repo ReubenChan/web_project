@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Experience | Reuben Chan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f7fa;
+      color: #343a40;
+      padding-top: 60px;
+    }
+
+    .experience-section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 15px;
+    }
+
+    .section-title {
+      font-size: 42px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #007bff;
+    }
+
+    .experience-card {
+      background: #fff;
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .experience-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .experience-logo {
+      height: 80px;
+      margin-bottom: 15px;
+    }
+
+    .experience-title {
+      font-size: 25px;
+      font-weight: 600;
+    }
+
+    .experience-meta {
+      font-size: 14px;
+      color: #6c757d;
+      margin-bottom: 10px;
+    }
+
+    ul.custom-bullets {
+      padding-left: 20px;
+    }
+
+    ul.custom-bullets li {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .experience-card {
+        padding: 20px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+    }
+
+  ul.custom-bullets {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+    }
+
+  ul.custom-bullets li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateX(-15px);
+    animation: fadeSlideIn 0.6s ease forwards;
+    }
+
+  ul.custom-bullets li::before {
+    content: "\f00c"; /* checkmark icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #28a745; /* green checkmark */
+    font-size: 15px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    }
+
+  ul.custom-bullets li:hover {
+    color: #007bff;
+    transform: translateX(5px);
+    }
+
+  @keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container experience-section">
+  <h2 class="section-title">Experience</h2>
+
+  <div class="experience-card reveal">
+    <img src="./images/ntt_data_inc_logo.jpg" class="experience-logo" alt="NTT Logo">
+    <div class="experience-title">Senior Associate DevOps Engineer</div>
+    <div class="experience-meta">Full-time | Jun 2023 - Dec 2024 (1 yr 7 mos) · Singapore · Hybrid</div>
+    <ul class="custom-bullets">
+      <li>Mentored interns and junior DevOps associates, fostering professional growth.</li>
+      <li>Delivered PoCs for AI Ops including IT Health Check, Root Cause Analysis, and Infrastructure Automation.</li>
+      <li>Developed Kubernetes automation using Intel QuickAssist Technology on Xeon processors to enhance performance.</li>
+      <li>Presented AI Ops and Cloud Security use cases at Goware Expo 2023 & 2024.</li>
+      <li>Handled Cisco compliance using Yang Model with Ansible orchestration.</li>
+    </ul>
+  </div>
+
+  <div class="experience-card reveal">
+    <img src="./images/generation_singapore_logo.jpg" class="experience-logo" alt="Generation Singapore Logo">
+    <div class="experience-title">Student Intern SGUP-CT Cloud Support and DevOps</div>
+    <div class="experience-meta">Full-time | Mar 2021 - Jan 2022 (11 mos) · Singapore</div>
+    <ul class="custom-bullets">
+      <li>Completed a comprehensive 3-month bootcamp followed by a 6-month apprenticeship.</li>
+      <li>Acquired proficiency in Python, Git, Linux, Ansible, Docker, Terraform, Azure, C#, Jenkins, and Agile.</li>
+      <li>Built strong teamwork and problem-solving skills essential for DevOps environments.</li>
+    </ul>
+  </div>
+
+  <div class="experience-card reveal">
+    <img src="./images/singapore_airlines_logo.jpg" class="experience-logo" alt="Singapore Airlines Logo">
+    <div class="experience-title">Flight Attendant</div>
+    <div class="experience-meta">Full-time | Aug 2012 - Feb 2021 (8 yrs 7 mos) · Singapore</div>
+    <ul class="custom-bullets">
+      <li>Brand ambassador delivering high standards, grooming, and medical support.</li>
+      <li>Awarded certificate of performance for A1 service in FY 19/20.</li>
+      <li>Received honorary title for service excellence in Q4 FY 19/20.</li>
+    </ul>
+  </div>
+
+  <div class="experience-card reveal">
+    <img src="./images/shangri_la_hotels_and_resorts_logo.jpg" class="experience-logo" alt="Shangri-La Group Logo">
+    <div class="experience-title">Management Trainee Program</div>
+    <div class="experience-meta">Full-time | Sep 2010 - Jul 2012 (1 yr 11 mos) · Kuala Lumpur, Malaysia</div>
+    <ul class="custom-bullets">
+      <li>Handled recruitment, compliance, and training in Human Resource.</li>
+      <li>Presented financial reports and budgets in the Finance Department.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Reveal Animation Script -->
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Reveal once
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  reveals.forEach(reveal => {
+    revealObserver.observe(reveal);
+  });
+</script>
+
+<script>
+  // Reveal experience cards
+  const cards = document.querySelectorAll('.experience-card');
+  const cardObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  cards.forEach(card => cardObserver.observe(card));
+
+  // Animate section title
+  const title = document.querySelector('.section-title');
+  const titleObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        title.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  titleObserver.observe(title);
+</script>
+
+</body>
+</html>

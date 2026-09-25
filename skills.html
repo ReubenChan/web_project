@@ -4,60 +4,156 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skills</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <h1>Skills</h1>
-  <hr>
+<body style="background-color: #f8f9fa; padding-top: 50px;">
+
+<div class="container">
+  <h1 class="text-center mb-5">My Skills</h1>
 
   <!-- Programming & DevOps Tools -->
-  <details open>
-    <summary><strong>💻 Programming & DevOps Tools</strong></summary>
-    <ul>
-      <li>Python ✅ 👥 15 endorsements</li>
-      <li>GitHub 👥 6 endorsements</li>
-      <li>Git 👥 5 endorsements</li>
-      <li>Bash ✅ 👥 5 endorsements</li>
-      <li>Linux ✅ 👥 7 endorsements</li>
-      <li>Ansible 👥 5 endorsements</li>
-      <li>Docker 👥 2 endorsements</li>
-      <li>Terraform 👥 4 endorsements</li>
-      <li>Vim 👥 2 endorsements</li>
-      <li>Visual Studio Code 👥 2 endorsements</li>
-      <li>Pycharm 👥 2 endorsements</li>
-      <li>C#</li>
-    </ul>
-  </details>
+  <div class="mb-4">
+    <button class="btn btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#devopsCollapse">
+      💻 Programming & DevOps Tools
+    </button>
+    <div class="collapse show" id="devopsCollapse">
+      <div class="p-4 shadow-sm bg-white">
+        <div class="progress-item">
+          <label>Python</label>
+          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>GitHub</label>
+          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Git</label>
+          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Bash</label>
+          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Linux</label>
+          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Ansible</label>
+          <div class="progress"><div class="progress-bar bg-success" style="width: 80%">80%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Docker</label>
+          <div class="progress"><div class="progress-bar bg-warning" style="width: 60%">60%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Terraform</label>
+          <div class="progress"><div class="progress-bar bg-warning" style="width: 50%">50%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Vim</label>
+          <div class="progress"><div class="progress-bar bg-warning" style="width: 60%">60%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Visual Studio Code</label>
+          <div class="progress"><div class="progress-bar bg-warning" style="width: 60%">60%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Microsoft Azure</label>
+          <div class="progress"><div class="progress-bar bg-danger" style="width: 40%">40%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>AWS</label>
+          <div class="progress"><div class="progress-bar bg-danger" style="width: 40%">40%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Jenkins</label>
+          <div class="progress"><div class="progress-bar bg-warning" style="width: 50%">50%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>ELK</label>
+          <div class="progress"><div class="progress-bar bg-warning" style="width: 60%">60%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Kubernetes</label>
+          <div class="progress"><div class="progress-bar bg-warning" style="width: 60%">60%</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Cloud & Infrastructure -->
-  <details>
-    <summary><strong>☁️ Cloud & Infrastructure</strong></summary>
-    <ul>
-      <li>Microsoft Azure ✅ 👥 16 endorsements</li>
-      <li>Cloud Computing 👥 2 endorsements</li>
-      <li>Ubuntu 👥 9 endorsements</li>
-      <li>Containerization 👥 2 endorsements</li>
-      <li>Infrastructure as Code (IaC) 👥 2 endorsements</li>
-      <li>Configuration Management</li>
-      <li>IT Automation</li>
-    </ul>
-  </details>
+  <div class="mb-4">
+    <button class="btn btn-secondary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#cloudCollapse">
+      ☁️ Cloud & Infrastructure
+    </button>
+    <div class="collapse" id="cloudCollapse">
+      <div class="p-4 shadow-sm bg-white">
+        <div class="progress-item">
+          <label>Cloud Computing</label>
+          <div class="progress"><div class="progress-bar bg-danger" style="width: 40%">40%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Containerization</label>
+          <div class="progress"><div class="progress-bar bg-warning" style="width: 60%">60%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Infrastructure as Code (IaC)</label>
+          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Configuration Management</label>
+          <div class="progress"><div class="progress-bar bg-success" style="width: 80%">80%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>IT Automation</label>
+          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Business & Soft Skills -->
-  <details>
-    <summary><strong>🧠 Business & Soft Skills</strong></summary>
-    <ul>
-      <li>Investment Strategies 👥 1 endorsement</li>
-      <li>Portfolio Management</li>
-      <li>Asset Allocation</li>
-      <li>Technical Analysis</li>
-      <li>Strategic Thinking 👥 2 endorsements</li>
-      <li>Resiliency 👥 2 endorsements</li>
-      <li>Time Management</li>
-      <li>Customer Experience</li>
-      <li>Hotel Management</li>
-      <li>First Aid 👥 1 endorsement</li>
-      <li>Flight Safety 👥 3 endorsements</li>
-    </ul>
-  </details>
+  <div class="mb-4">
+    <button class="btn btn-dark w-100" type="button" data-bs-toggle="collapse" data-bs-target="#businessCollapse">
+      🧠 Business & Soft Skills
+    </button>
+    <div class="collapse" id="businessCollapse">
+      <div class="p-4 shadow-sm bg-white">
+        <div class="progress-item">
+          <label>Investment Strategies</label>
+          <div class="progress"><div class="progress-bar bg-success" style="width: 80%">80%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Portfolio Management</label>
+          <div class="progress"><div class="progress-bar bg-success" style="width: 80%">80%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Asset Allocation</label>
+          <div class="progress"><div class="progress-bar bg-success" style="width: 80%">80%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Technical Analysis</label>
+          <div class="progress"><div class="progress-bar bg-success" style="width: 80%">80%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Resilience</label>
+          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Time Management</label>
+          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
+        </div>
+        <div class="progress-item">
+          <label>Strategic Thinking</label>
+          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>

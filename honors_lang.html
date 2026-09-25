@@ -4,27 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Honors & Languages</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      padding-top: 50px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .section-box {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-in-out;
+    }
+    .section-box.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .honor-icon, .language-icon {
+      margin-right: 8px;
+    }
+    .badge-tag {
+      font-size: 0.9rem;
+      margin-left: 10px;
+    }
+    ul.list-unstyled li {
+      padding: 6px 0;
+    }
+  </style>
 </head>
 <body>
-  <h1>Honors & Awards</h1>
-  <hr>
 
-  <section>
-    <h2>🏅 Awarded Crew of The Quarter (Oct - Dec 19/20)</h2>
-    <p><strong>Issued by:</strong> Honor Issuer Singapore Airlines Limited</p>
-    <p><strong>Associated with:</strong> Singapore Airlines</p>
-    <p>Service Over and Above the Rest (SOAR) Award for Crew of The Quarter</p>
+<div class="container">
+  <h1 class="text-center mb-5">Honors & Languages</h1>
+
+  <section class="section-box">
+    <h4 class="mb-3"><i class="fas fa-medal text-warning honor-icon"></i><strong>Awarded Crew of The Quarter</strong> <span class="badge bg-warning text-dark">Oct - Dec 19/20</span></h4>
+    <p><i class="fas fa-award text-secondary"></i> <strong>Issued by:</strong> Honor Issuer Singapore Airlines Limited</p>
+    <p><i class="fas fa-plane text-primary"></i> <strong>Associated with:</strong> Singapore Airlines</p>
+    <p><i class="fas fa-star text-success"></i> Service Over and Above the Rest (SOAR) Award for Crew of The Quarter</p>
   </section>
 
-  <hr>
-
-  <h1>Languages</h1>
-  <section>
-    <ul>
-      <li>🌐 <strong>English:</strong> Full professional proficiency</li>
-      <li>🌐 <strong>Malay:</strong> Professional working proficiency</li>
-      <li>🌐 <strong>Chinese:</strong> Limited working proficiency</li>
+  <section class="section-box">
+    <h4 class="mb-3"><i class="fas fa-language text-info language-icon"></i><strong>Languages</strong></h4>
+    <ul class="list-unstyled">
+      <li><i class="fas fa-globe text-primary"></i> <strong>English</strong>: Full professional proficiency <span class="badge bg-primary">Fluent</span></li>
+      <li><i class="fas fa-globe text-success"></i> <strong>Malay</strong>: Professional working proficiency <span class="badge bg-success">Advanced</span></li>
+      <li><i class="fas fa-globe text-warning"></i> <strong>Chinese</strong>: Limited working proficiency <span class="badge bg-warning text-dark">Basic</span></li>
     </ul>
   </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<script>
+  document.querySelectorAll('.section-box').forEach((box, i) => {
+    setTimeout(() => box.classList.add('visible'), i * 300);
+  });
+</script>
 </body>
 </html>

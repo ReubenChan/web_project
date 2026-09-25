@@ -1,90 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> My Resume</title>
+  <title>Reuben Chan | Portfolio Resume</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #f8f9fa;
+    color: #212529;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  .jumbotron {
+    background: none;
+  }
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  .contact-icons a,
+  .email-link {
+    display: inline-block;
+    color: white;
+    background-color: #4a4a4a;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .contact-icons a:hover,
+  .email-link:hover {
+    background-color: #007bff;
+    transform: scale(1.1);
+  }
+  .profile-section-links {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .profile-section-links a {
+    color: #007bff;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+  }
+  .profile-section-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #007bff;
+    transition: width 0.3s ease-in-out;
+  }
+  .profile-section-links a:hover::after {
+    width: 100%;
+  }
+  #about {
+    margin-top: 30px;
+  }
+  .profile-img {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  .profile-img:hover {
+    transform: scale(1.03);
+  }
+  .about-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: none;
+  }
+  @media (max-width: 768px) {
+    .about-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+    .col-sm-3, .col-sm-9 {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+
 </head>
 <body>
-  <a href="index.html"><img src="./images/profile_pic.jpg" height="200" alt="Profile Picture"></a>
-  <p>
-    <a href="https://www.linkedin.com/in/reubenchanep/" target="_blank">
-      <img src="./images/linked.png" height="24" alt="LinkedIn Profile" style="vertical-align: middle;">
-      Reuben Chan
-    </a>
-  </p>
-     
-  <p>
-    <a href="education.html">Education</a> |
-    <a href="certificates.html">Certificates</a> |
-    <a href="skills.html">Skills</a> |
-    <a href="honors_lang.html">Honors & Languages</a>
-  </p>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-  <h1>About me</h1>
-  <hr>
-  <p>Results-driven DevOps Engineer with over three years of experience in automating processes and managing AI Ops and infrastructure within hybrid IT environments. Proficient in utilizing automation tools and various APIs to streamline operations and enhance system performance. Proven track record of delivering innovative solutions for AI Ops and infrastructure automation, contributing to improved service continuity and operational excellence. Experienced in both technical and training roles, mentoring junior associates and managing complex projects.</p>
+<div class="jumbotron text-center">
+  <h1>Reuben Chan</h1>
+  <p>DevOps Engineer | AI Ops | Hybrid Automation</p>
+</div>
 
-  <h1>Experience</h1>
-  <hr>
+<div class="container" id="about">
+  <div class="row about-wrapper">
+    <div class="col-sm-3 text-center">
+      <a href="index.html"><img src="./images/profile_pic.jpg" class="img-responsive center-block profile-img" alt="Profile Picture"></a>
+      <div class="contact-icons">
+        <a href="mailto:reubenchan2010@hotmail.com" class="email-link"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/reubenchanep/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/ReubenChan" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="profile-section-links">
+        <a href="experience.html">Experience</a>
+        <a href="education.html">Education</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="skills.html">Skills</a>
+        <a href="honors_lang.html">Honors & Languages</a>
+      </div>
+    </div>
+    <div class="col-sm-9">
+      <h3 class="section-title">About Me</h3>
+      <p>Results-driven DevOps Engineer with over three years of experience in automating processes and managing AI Ops and infrastructure within hybrid IT environments. Proficient in utilizing automation tools and various APIs to streamline operations and enhance system performance. Proven track record of delivering innovative solutions for AI Ops and infrastructure automation, contributing to improved service continuity and operational excellence. Experienced in both technical and training roles, mentoring junior associates and managing complex projects.</p>
+    </div>
+  </div>
+</div>
 
-  <section>
-    <div>
-      <img src="./images/ntt_data_inc_logo.jpg" height="100" alt="NTT Logo">
-    </div>
-    <h2>Senior Associate DevOps Engineer</h2>
-    <p><strong>Full-time | Jun 2023 - Dec 2024 (1 yr 7 mos)</strong><br>
-    Singapore · Hybrid</p>
-  
-    <ul>
-      <li>Mentored interns and junior DevOps associates, fostering professional growth.</li>
-      <li>Delivered PoCs for AI Ops including IT Health Check, Root Cause Analysis, and Infrastructure Automation.</li>
-      <li>Developed Kubernetes automation using Intel QuickAssist Technology on Xeon processors to enhance performance.</li>
-      <li>Presented AI Ops and Cloud Security use cases at Goware Expo 2023 & 2024.</li>
-      <li>Handled Cisco compliance using Yang Model with Ansible orchestration.</li>
-    </ul>
-  </section>
-  <section>
-    <div>
-      <img src="./images/generation_singapore_logo.jpg" height="100" alt="Generation Singapore Logo">
-    </div>
-    <h2>Student Intern SGUP-CT Cloud Support and DevOps</h2>
-    <p><strong>Full-time | Mar 2021 - Jan 2022 (11 mos)</strong><br>
-    Singapore</p>
-  
-    <ul>
-      <li>Completed a comprehensive 3-month bootcamp followed by a 6-month apprenticeship, gaining hands-on experience in cloud support and DevOps.</li>
-      <li>Acquired technical proficiency in Python, Git, Linux, Ansible, Docker, Terraform, Azure, C#, Jenkins, and Agile methodologies through project-based learning.</li>
-      <li>Developed strong behavioral and mindset skills crucial for effective cloud support and DevOps performance, emphasizing teamwork, problem-solving, and continuous learning.</li>
-    </ul>
-  </section>
-  <section>
-    <div>
-      <img src="./images/singapore_airlines_logo.jpg" height="100" alt="Singapore Airlines Logo">
-    </div>
-    <h2>Flight Attendant</h2>
-    <p><strong>Full-time | Aug 2012 - Feb 2021 (8 yrs 7 mos)</strong><br>
-    Singapore</p>
-  
-    <ul>
-      <li>Brand ambassador for Singapore Airlines, delivering high service standards, grooming, first aid, and medical support.</li>
-      <li>Awarded certificate of performance for outstanding A1 service in FY 19/20.</li>
-      <li>Received honorary title ‘Service over and above the rest’ for Q4 (Oct–Dec 19/20) excellence.</li>
-    </ul>
-  </section>
-  <section>
-    <div>
-      <img src="images/shangri_la_hotels_and_resorts_logo.jpg" height="100" alt="Shangri-La Group Logo">
-    </div>
-    <h2>Management Trainee Program</h2>
-    <p><strong>Full-time | Sep 2010 - Jul 2012 (1 yr 11 mos)</strong><br>
-    Federal Territory of Kuala Lumpur, Malaysia</p>
-  
-    <ul>
-      <li>Handled recruitment, interviews, compliance, training, and team-building in the Human Resource Department.</li>
-      <li>Compiled and presented financial reports, budgets, commentaries, and statements in the Finance Department.</li>
-    </ul>
-  </section>
-  
 </body>
 </html>
