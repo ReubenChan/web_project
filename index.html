@@ -1,173 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Reuben Chan | Portfolio Resume</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Reuben Chan | DevOps Engineer · AI Ops · Hybrid Automation</title>
+  <meta name="description" content="Reuben Chan is a Singapore-based DevOps Engineer with experience in AI Ops, infrastructure automation and hybrid IT environments.">
+  <link rel="canonical" href="https://reubenchan.github.io/web_project/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f7fa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e131a" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Reuben Chan">
+  <meta property="og:title" content="Reuben Chan | DevOps Engineer · AI Ops · Hybrid Automation">
+  <meta property="og:description" content="Reuben Chan is a Singapore-based DevOps Engineer with experience in AI Ops, infrastructure automation and hybrid IT environments.">
+  <meta property="og:url" content="https://reubenchan.github.io/web_project/">
+  <meta property="og:image" content="https://reubenchan.github.io/web_project/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Reuben Chan, DevOps Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Reuben Chan",
+    "jobTitle": "DevOps Engineer",
+    "url": "https://reubenchan.github.io/web_project/",
+    "image": "https://reubenchan.github.io/web_project/images/profile_pic-480.webp",
+    "email": "mailto:reubenchan2010@hotmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Singapore",
+      "addressCountry": "SG"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/reubenchanep/",
+      "https://github.com/ReubenChan"
+    ],
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Singapore Management University"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Taylor's University"
+      }
+    ],
+    "knowsLanguage": [
+      "English",
+      "Malay",
+      "Chinese"
+    ],
+    "knowsAbout": [
+      "DevOps",
+      "AI Ops",
+      "Infrastructure Automation",
+      "Ansible",
+      "Kubernetes",
+      "Docker",
+      "Python",
+      "Infrastructure as Code"
+    ]
+  }
+  </script>
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+    } catch {}
+  </script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/roboto-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" type="image/avif" imagesrcset="images/profile_pic-240.avif 240w, images/profile_pic-480.avif 480w" imagesizes="15rem" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    background-color: #f8f9fa;
-    color: #212529;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-  }
-  .jumbotron {
-    background: none;
-  }
-  .contact-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-top: 10px;
-  }
-  .contact-icons a,
-  .email-link {
-    display: inline-block;
-    color: white;
-    background-color: #4a4a4a;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
-    font-size: 18px;
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  .contact-icons a:hover,
-  .email-link:hover {
-    background-color: #007bff;
-    transform: scale(1.1);
-  }
-  .profile-section-links {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    font-size: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  .profile-section-links a {
-    color: #007bff;
-    font-weight: 500;
-    text-decoration: none;
-    position: relative;
-  }
-  .profile-section-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: #007bff;
-    transition: width 0.3s ease-in-out;
-  }
-  .profile-section-links a:hover::after {
-    width: 100%;
-  }
-  #about {
-    margin-top: 30px;
-  }
-  .profile-img {
-    margin-bottom: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  .profile-img:hover {
-    transform: scale(1.03);
-  }
-  .about-wrapper {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-  .fade-in.visible {
-    opacity: 1;
-    transform: none;
-  }
-  @media (max-width: 768px) {
-    .about-wrapper {
-      flex-direction: column;
-      align-items: center;
-    }
-    .col-sm-3, .col-sm-9 {
-      width: 100%;
-      text-align: center;
-    }
-  }
-</style>
-
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">Reuben Chan</a>
+    <button class="icon-button nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <span class="visually-hidden">Menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="honors_lang.html">Honors &amp; Languages</a></li>
       </ul>
-    </div>
+    </nav>
+    <button class="icon-button theme-toggle" type="button" aria-pressed="false">
+      <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <span class="visually-hidden">Dark mode</span>
+    </button>
   </div>
-</nav>
+</header>
 
-<div class="jumbotron text-center">
-  <h1>Reuben Chan</h1>
-  <p>DevOps Engineer | AI Ops | Hybrid Automation</p>
-</div>
+<main id="main">
+  <div class="container hero-wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <picture>
+        <source type="image/avif" srcset="images/profile_pic-240.avif 240w, images/profile_pic-480.avif 480w" sizes="15rem">
+        <img class="hero-photo" src="images/profile_pic-480.webp" srcset="images/profile_pic-240.webp 240w, images/profile_pic-480.webp 480w" sizes="15rem" width="240" height="240" alt="Portrait of Reuben Chan" fetchpriority="high">
+      </picture>
+      <div>
+        <h1 id="hero-title">Reuben Chan</h1>
+        <p class="hero-role">DevOps Engineer · AI Ops · Hybrid Automation</p>
+        <ul class="contact-links">
+          <li>
+            <a class="button button--primary" href="mailto:reubenchan2010@hotmail.com">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              Email me
+            </a>
+          </li>
+          <li>
+            <a class="button" href="https://www.linkedin.com/in/reubenchanep/" target="_blank" rel="noopener noreferrer">
+              <svg class="icon icon--solid" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+              LinkedIn<span class="visually-hidden"> (opens in a new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a class="button" href="https://github.com/ReubenChan" target="_blank" rel="noopener noreferrer">
+              <svg class="icon icon--solid" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+              GitHub<span class="visually-hidden"> (opens in a new tab)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
 
-<div class="container" id="about">
-  <div class="row about-wrapper">
-    <div class="col-sm-3 text-center">
-      <a href="index.html"><img src="./images/profile_pic.jpg" class="img-responsive center-block profile-img" alt="Profile Picture"></a>
-      <div class="contact-icons">
-        <a href="mailto:reubenchan2010@hotmail.com" class="email-link"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/reubenchanep/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/ReubenChan" target="_blank"><i class="fab fa-github"></i></a>
-      </div>
-      <div class="profile-section-links">
-        <a href="experience.html">Experience</a>
-        <a href="education.html">Education</a>
-        <a href="certificates.html">Certificates</a>
-        <a href="skills.html">Skills</a>
-        <a href="honors_lang.html">Honors & Languages</a>
-      </div>
-    </div>
-    <div class="col-sm-9">
-      <h3 class="section-title">About Me</h3>
+  <section class="container section" aria-labelledby="about-title">
+    <h2 class="section-title" id="about-title">About me</h2>
+    <div class="card prose">
       <p>Results-driven DevOps Engineer with over three years of experience in automating processes and managing AI Ops and infrastructure within hybrid IT environments. Proficient in utilizing automation tools and various APIs to streamline operations and enhance system performance. Proven track record of delivering innovative solutions for AI Ops and infrastructure automation, contributing to improved service continuity and operational excellence. Experienced in both technical and training roles, mentoring junior associates and managing complex projects.</p>
     </div>
-  </div>
-</div>
+  </section>
 
+  <nav class="container section" aria-labelledby="explore-title">
+    <h2 class="section-title" id="explore-title">Explore</h2>
+    <ul class="link-cards">
+      <li class="reveal">
+        <a class="link-card" href="experience.html">
+          <span class="link-card-title">Experience <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          <span class="link-card-desc">DevOps engineering, cloud support, aviation and hospitality roles.</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a class="link-card" href="education.html">
+          <span class="link-card-title">Education <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          <span class="link-card-desc">Singapore Management University and Taylor's University.</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a class="link-card" href="certificates.html">
+          <span class="link-card-title">Certificates <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          <span class="link-card-desc">Microsoft Azure, VMware, NGINX, SAFe, Linux and Python.</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a class="link-card" href="skills.html">
+          <span class="link-card-title">Skills <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          <span class="link-card-desc">DevOps tools, cloud infrastructure and business skills.</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a class="link-card" href="honors_lang.html">
+          <span class="link-card-title">Honors &amp; Languages <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          <span class="link-card-desc">Singapore Airlines service award; English, Malay and Chinese.</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Reuben Chan · DevOps Engineer · Singapore</p>
+    <ul class="contact-links">
+      <li><a class="icon-button" href="mailto:reubenchan2010@hotmail.com" aria-label="Email Reuben">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+      </a></li>
+      <li><a class="icon-button" href="https://www.linkedin.com/in/reubenchanep/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)">
+        <svg class="icon icon--solid" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      </a></li>
+      <li><a class="icon-button" href="https://github.com/ReubenChan" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)">
+        <svg class="icon icon--solid" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a></li>
+    </ul>
+  </div>
+</footer>
 </body>
 </html>
