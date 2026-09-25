@@ -1,159 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skills</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skills | Reuben Chan, DevOps Engineer</title>
+  <meta name="description" content="Skills of Reuben Chan: Ansible, Python, Git, Linux, Docker, Kubernetes, Terraform, Azure and AWS, plus infrastructure as code, configuration management and business skills.">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+    } catch {}
+  </script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/roboto-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/main.js" defer></script>
 </head>
-<body style="background-color: #f8f9fa; padding-top: 50px;">
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<div class="container">
-  <h1 class="text-center mb-5">My Skills</h1>
-
-  <!-- Programming & DevOps Tools -->
-  <div class="mb-4">
-    <button class="btn btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#devopsCollapse">
-      💻 Programming & DevOps Tools
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">Reuben Chan</a>
+    <button class="icon-button nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <span class="visually-hidden">Menu</span>
     </button>
-    <div class="collapse show" id="devopsCollapse">
-      <div class="p-4 shadow-sm bg-white">
-        <div class="progress-item">
-          <label>Python</label>
-          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>GitHub</label>
-          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Git</label>
-          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Bash</label>
-          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Linux</label>
-          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Ansible</label>
-          <div class="progress"><div class="progress-bar bg-success" style="width: 80%">80%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Docker</label>
-          <div class="progress"><div class="progress-bar bg-warning" style="width: 60%">60%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Terraform</label>
-          <div class="progress"><div class="progress-bar bg-warning" style="width: 50%">50%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Vim</label>
-          <div class="progress"><div class="progress-bar bg-warning" style="width: 60%">60%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Visual Studio Code</label>
-          <div class="progress"><div class="progress-bar bg-warning" style="width: 60%">60%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Microsoft Azure</label>
-          <div class="progress"><div class="progress-bar bg-danger" style="width: 40%">40%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>AWS</label>
-          <div class="progress"><div class="progress-bar bg-danger" style="width: 40%">40%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Jenkins</label>
-          <div class="progress"><div class="progress-bar bg-warning" style="width: 50%">50%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>ELK</label>
-          <div class="progress"><div class="progress-bar bg-warning" style="width: 60%">60%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Kubernetes</label>
-          <div class="progress"><div class="progress-bar bg-warning" style="width: 60%">60%</div></div>
-        </div>
-      </div>
-    </div>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="skills.html" aria-current="page">Skills</a></li>
+        <li><a href="honors_lang.html">Honors &amp; Languages</a></li>
+      </ul>
+    </nav>
+    <button class="icon-button theme-toggle" type="button" aria-pressed="false">
+      <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <span class="visually-hidden">Dark mode</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="container page-intro">
+    <h1>Skills</h1>
   </div>
 
-  <!-- Cloud & Infrastructure -->
-  <div class="mb-4">
-    <button class="btn btn-secondary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#cloudCollapse">
-      ☁️ Cloud & Infrastructure
-    </button>
-    <div class="collapse" id="cloudCollapse">
-      <div class="p-4 shadow-sm bg-white">
-        <div class="progress-item">
-          <label>Cloud Computing</label>
-          <div class="progress"><div class="progress-bar bg-danger" style="width: 40%">40%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Containerization</label>
-          <div class="progress"><div class="progress-bar bg-warning" style="width: 60%">60%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Infrastructure as Code (IaC)</label>
-          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Configuration Management</label>
-          <div class="progress"><div class="progress-bar bg-success" style="width: 80%">80%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>IT Automation</label>
-          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
-        </div>
-      </div>
+  <div class="container section">
+    <div class="stack">
+      <section class="card reveal" aria-labelledby="devops-title">
+        <h2 id="devops-title">Programming &amp; DevOps Tools</h2>
+        <h3 class="skill-level skill-level--advanced">Advanced</h3>
+        <ul class="tags">
+          <li>Ansible</li>
+        </ul>
+        <h3 class="skill-level skill-level--proficient">Proficient</h3>
+        <ul class="tags">
+          <li>Python</li>
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>Bash</li>
+          <li>Linux</li>
+          <li>Docker</li>
+          <li>Kubernetes</li>
+          <li>ELK</li>
+          <li>Vim</li>
+          <li>Visual Studio Code</li>
+        </ul>
+        <h3 class="skill-level skill-level--familiar">Familiar</h3>
+        <ul class="tags">
+          <li>Terraform</li>
+          <li>Jenkins</li>
+          <li>Microsoft Azure</li>
+          <li>AWS</li>
+        </ul>
+      </section>
+
+      <section class="card reveal" aria-labelledby="cloud-title">
+        <h2 id="cloud-title">Cloud &amp; Infrastructure</h2>
+        <h3 class="skill-level skill-level--advanced">Advanced</h3>
+        <ul class="tags">
+          <li>Configuration Management</li>
+        </ul>
+        <h3 class="skill-level skill-level--proficient">Proficient</h3>
+        <ul class="tags">
+          <li>Infrastructure as Code (IaC)</li>
+          <li>IT Automation</li>
+          <li>Containerization</li>
+        </ul>
+        <h3 class="skill-level skill-level--familiar">Familiar</h3>
+        <ul class="tags">
+          <li>Cloud Computing</li>
+        </ul>
+      </section>
+
+      <section class="card reveal" aria-labelledby="business-title">
+        <h2 id="business-title">Business &amp; Soft Skills</h2>
+        <h3 class="skill-level skill-level--advanced">Advanced</h3>
+        <ul class="tags">
+          <li>Investment Strategies</li>
+          <li>Portfolio Management</li>
+          <li>Asset Allocation</li>
+          <li>Technical Analysis</li>
+        </ul>
+        <h3 class="skill-level skill-level--proficient">Proficient</h3>
+        <ul class="tags">
+          <li>Resilience</li>
+          <li>Time Management</li>
+          <li>Strategic Thinking</li>
+        </ul>
+      </section>
     </div>
   </div>
+</main>
 
-  <!-- Business & Soft Skills -->
-  <div class="mb-4">
-    <button class="btn btn-dark w-100" type="button" data-bs-toggle="collapse" data-bs-target="#businessCollapse">
-      🧠 Business & Soft Skills
-    </button>
-    <div class="collapse" id="businessCollapse">
-      <div class="p-4 shadow-sm bg-white">
-        <div class="progress-item">
-          <label>Investment Strategies</label>
-          <div class="progress"><div class="progress-bar bg-success" style="width: 80%">80%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Portfolio Management</label>
-          <div class="progress"><div class="progress-bar bg-success" style="width: 80%">80%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Asset Allocation</label>
-          <div class="progress"><div class="progress-bar bg-success" style="width: 80%">80%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Technical Analysis</label>
-          <div class="progress"><div class="progress-bar bg-success" style="width: 80%">80%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Resilience</label>
-          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Time Management</label>
-          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
-        </div>
-        <div class="progress-item">
-          <label>Strategic Thinking</label>
-          <div class="progress"><div class="progress-bar bg-info" style="width: 70%">70%</div></div>
-        </div>
-      </div>
-    </div>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Reuben Chan · DevOps Engineer · Singapore</p>
+    <ul class="contact-links">
+      <li><a class="icon-button" href="mailto:reubenchan2010@hotmail.com" aria-label="Email Reuben">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+      </a></li>
+      <li><a class="icon-button" href="https://www.linkedin.com/in/reubenchanep/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)">
+        <svg class="icon icon--solid" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      </a></li>
+      <li><a class="icon-button" href="https://github.com/ReubenChan" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)">
+        <svg class="icon icon--solid" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a></li>
+    </ul>
   </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</footer>
 </body>
 </html>

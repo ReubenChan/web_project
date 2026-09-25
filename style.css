@@ -111,7 +111,7 @@ h3 { font-size: var(--step-1); }
 
 p { margin: 0 0 var(--space-4); text-wrap: pretty; }
 
-ul { margin: 0; padding: 0; }
+ul, ol { margin: 0; padding: 0; }
 
 img, svg { display: block; max-width: 100%; }
 img { height: auto; }
@@ -443,23 +443,191 @@ main { flex: 1; }
 .link-card:hover .link-card-title .icon { transform: translateX(3px); }
 .link-card-desc { color: var(--color-text-muted); font-size: var(--step--1); }
 
+/* Organisation logos: the source images have white backgrounds, so they sit
+   on a white tile in both themes. */
+.logo {
+  flex: none;
+  width: 4rem;
+  height: 4rem;
+  padding: var(--space-1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: #ffffff;
+  object-fit: contain;
+}
+
+.muted { color: var(--color-text-muted); }
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 0.125rem var(--space-2);
+  border-radius: var(--radius-pill);
+  background: var(--color-neutral-soft);
+  color: var(--color-text-muted);
+  font-size: var(--step--1);
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.badge--accent  { background: var(--color-accent-soft);  color: var(--color-accent); }
+.badge--success { background: var(--color-success-soft); color: var(--color-success); }
+.badge--warning { background: var(--color-warning-soft); color: var(--color-warning); }
+
+/* Check-mark bullet list (the icon is a CSS mask, so it takes the token colour) */
+.checklist { list-style: none; }
+.checklist li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: var(--space-2);
+}
+.checklist li:last-child { margin-bottom: 0; }
+.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.3em;
+  width: 1.1em;
+  height: 1.1em;
+  background: var(--color-success);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* Subgrid card grid (Certificates, Education).
+   Each card spans 4 rows of the parent grid and adopts them with subgrid, so
+   logo, title, details and action line up across every card in a row, no
+   matter how long each card's text is. */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--card-min, 18rem)), 1fr));
+  gap: var(--space-5) var(--space-4);
+}
+.card-grid > .card {
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+  row-gap: var(--space-3);
+  /* container-type implies layout containment, which disables subgrid. */
+  container-type: normal;
+  align-content: start;
+}
+.card-grid > .card > * { margin: 0; }
+.card-grid h2 { font-size: var(--step-1); }
+.card-grid h2 .badge { margin-left: var(--space-1); vertical-align: middle; }
+.card-grid--wide { --card-min: 22rem; }
+
+.card-action { align-self: end; }
+
+/* Experience timeline */
+.timeline { list-style: none; display: grid; gap: var(--space-5); }
+
+.job-header {
+  display: grid;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.job-title { margin-bottom: var(--space-1); font-size: var(--step-2); }
+.job-company { margin: 0; font-weight: 600; }
+.job-meta { margin: 0; color: var(--color-text-muted); font-size: var(--step--1); }
+
+/* Wide card: logo beside the text, bullets indented under the text. */
+@container (min-width: 34rem) {
+  .job-header { grid-template-columns: auto 1fr; align-items: center; gap: var(--space-5); }
+  .job .checklist { margin-left: calc(4rem + var(--space-5)); }
+}
+
+/* Skills */
+.skill-level {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: var(--space-4) 0 var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.skill-level:first-of-type { margin-top: 0; }
+.skill-level::before {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--dot, var(--color-text-muted));
+}
+.skill-level--advanced   { --dot: var(--color-success); }
+.skill-level--proficient { --dot: var(--color-accent); }
+.skill-level--familiar   { --dot: var(--color-warning); }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+}
+.tags li {
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-2);
+  font-size: var(--step--1);
+  font-weight: 500;
+}
+
+/* Honors & languages, Skills */
+.stack { display: grid; gap: var(--space-5); }
+.stack > .card > h2 { margin-bottom: var(--space-4); font-size: var(--step-2); }
+
+.award-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.award-header h2 { margin: 0; font-size: var(--step-2); }
+.award-icon { width: 2rem; height: 2rem; color: var(--color-warning); }
+.award-icon--accent { color: var(--color-accent); }
+.award-note { margin: var(--space-4) 0 0; }
+
+.detail-list { display: grid; gap: var(--space-2); margin: 0; }
+.detail-list div { display: flex; flex-wrap: wrap; gap: 0 var(--space-2); }
+.detail-list dt { font-weight: 600; }
+.detail-list dd { margin: 0; }
+
+.language-list { list-style: none; display: grid; gap: var(--space-3); }
+.language-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+.language-list li:last-child { padding-bottom: 0; border-bottom: 0; }
+.language-name { font-weight: 600; }
+
 /* 8. Motion -------------------------------------------------------------- */
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
 
-  /* Scroll-driven reveal: pure CSS, no JavaScript. Content is fully visible
-     in browsers without support and for people who prefer reduced motion. */
+  /* Scroll-driven reveal: pure CSS, no JavaScript. Cards slide up as they
+     enter the viewport. There is deliberately no fade: a card resting at the
+     bottom edge would stay semi-transparent and fail text contrast. */
   @supports (animation-timeline: view()) {
     .reveal {
       animation: reveal linear both;
       animation-timeline: view();
-      animation-range: entry 0% entry 35%;
+      animation-range: entry 0% entry 40%;
     }
   }
 }
 
 @keyframes reveal {
-  from { opacity: 0; transform: translateY(1.5rem); }
+  from { transform: translateY(2rem) scale(0.98); }
 }
 
 @media (prefers-reduced-motion: reduce) {
