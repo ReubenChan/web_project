@@ -1,0 +1,7 @@
+# Lighthouse CI output (generated locally and in CI)
+.lighthouseci/
+
+node_modules/
+_site/
+.DS_Store
+Thumbs.db
