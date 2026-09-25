@@ -369,6 +369,8 @@ main { flex: 1; }
   text-align: center;
 }
 
+.hero picture { display: contents; }
+
 .hero-photo {
   width: clamp(9rem, 40cqi, 15rem);
   aspect-ratio: 1;
@@ -628,6 +630,25 @@ main { flex: 1; }
 @keyframes reveal {
   from { transform: translateY(2rem) scale(0.98); }
 }
+
+/* Cross-document View Transitions: page-to-page navigation cross-fades
+   natively, the header stays put, and the page title slides in. Browsers
+   without support simply navigate as normal. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+
+  .site-header { view-transition-name: site-header; }
+  .page-intro h1 { view-transition-name: page-title; }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) { animation-duration: 180ms; }
+
+  ::view-transition-old(page-title) { animation: 160ms var(--ease) both vt-slide-out; }
+  ::view-transition-new(page-title) { animation: 260ms var(--ease) both vt-slide-in; }
+}
+
+@keyframes vt-slide-out { to { opacity: 0; transform: translateX(-1.5rem); } }
+@keyframes vt-slide-in { from { opacity: 0; transform: translateX(1.5rem); } }
 
 @media (prefers-reduced-motion: reduce) {
   *,
