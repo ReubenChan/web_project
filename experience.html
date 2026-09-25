@@ -1,229 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Experience | Reuben Chan</title>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f4f7fa;
-      color: #343a40;
-      padding-top: 60px;
-    }
-
-    .experience-section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px 15px;
-    }
-
-    .section-title {
-      font-size: 42px;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 40px;
-      color: #007bff;
-    }
-
-    .experience-card {
-      background: #fff;
-      border: 1px solid #dee2e6;
-      border-radius: 10px;
-      padding: 25px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      transition: transform 0.2s;
-      opacity: 0;
-      transform: translateY(40px);
-    }
-
-    .experience-card.visible {
-      opacity: 1;
-      transform: translateY(0);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    .experience-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .experience-logo {
-      height: 80px;
-      margin-bottom: 15px;
-    }
-
-    .experience-title {
-      font-size: 25px;
-      font-weight: 600;
-    }
-
-    .experience-meta {
-      font-size: 14px;
-      color: #6c757d;
-      margin-bottom: 10px;
-    }
-
-    ul.custom-bullets {
-      padding-left: 20px;
-    }
-
-    ul.custom-bullets li {
-      margin-bottom: 8px;
-    }
-
-    @media (max-width: 768px) {
-      .experience-card {
-        padding: 20px;
-      }
-
-      .section-title {
-        font-size: 28px;
-      }
-    }
-
-  ul.custom-bullets {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 15px;
-    }
-
-  ul.custom-bullets li {
-    position: relative;
-    padding-left: 28px;
-    margin-bottom: 12px;
-    font-size: 16px;
-    line-height: 1.6;
-    opacity: 0;
-    transform: translateX(-15px);
-    animation: fadeSlideIn 0.6s ease forwards;
-    }
-
-  ul.custom-bullets li::before {
-    content: "\f00c"; /* checkmark icon */
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    color: #28a745; /* green checkmark */
-    font-size: 15px;
-    position: absolute;
-    left: 0;
-    top: 2px;
-    }
-
-  ul.custom-bullets li:hover {
-    color: #007bff;
-    transform: translateX(5px);
-    }
-
-  @keyframes fadeSlideIn {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    }
-  </style>
+  <title>Experience | Reuben Chan, DevOps Engineer</title>
+  <meta name="description" content="Work experience of Reuben Chan: DevOps engineering at NTT DATA, cloud support and DevOps at Generation Singapore, Singapore Airlines and Shangri-La Group.">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+    } catch {}
+  </script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/roboto-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<div class="container experience-section">
-  <h2 class="section-title">Experience</h2>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">Reuben Chan</a>
+    <button class="icon-button nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <span class="visually-hidden">Menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html" aria-current="page">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="honors_lang.html">Honors &amp; Languages</a></li>
+      </ul>
+    </nav>
+    <button class="icon-button theme-toggle" type="button" aria-pressed="false">
+      <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <span class="visually-hidden">Dark mode</span>
+    </button>
+  </div>
+</header>
 
-  <div class="experience-card reveal">
-    <img src="./images/ntt_data_inc_logo.jpg" class="experience-logo" alt="NTT Logo">
-    <div class="experience-title">Senior Associate DevOps Engineer</div>
-    <div class="experience-meta">Full-time | Jun 2023 - Dec 2024 (1 yr 7 mos) · Singapore · Hybrid</div>
-    <ul class="custom-bullets">
-      <li>Mentored interns and junior DevOps associates, fostering professional growth.</li>
-      <li>Delivered PoCs for AI Ops including IT Health Check, Root Cause Analysis, and Infrastructure Automation.</li>
-      <li>Developed Kubernetes automation using Intel QuickAssist Technology on Xeon processors to enhance performance.</li>
-      <li>Presented AI Ops and Cloud Security use cases at Goware Expo 2023 & 2024.</li>
-      <li>Handled Cisco compliance using Yang Model with Ansible orchestration.</li>
-    </ul>
+<main id="main">
+  <div class="container page-intro">
+    <h1>Experience</h1>
   </div>
 
-  <div class="experience-card reveal">
-    <img src="./images/generation_singapore_logo.jpg" class="experience-logo" alt="Generation Singapore Logo">
-    <div class="experience-title">Student Intern SGUP-CT Cloud Support and DevOps</div>
-    <div class="experience-meta">Full-time | Mar 2021 - Jan 2022 (11 mos) · Singapore</div>
-    <ul class="custom-bullets">
-      <li>Completed a comprehensive 3-month bootcamp followed by a 6-month apprenticeship.</li>
-      <li>Acquired proficiency in Python, Git, Linux, Ansible, Docker, Terraform, Azure, C#, Jenkins, and Agile.</li>
-      <li>Built strong teamwork and problem-solving skills essential for DevOps environments.</li>
+  <div class="container section">
+    <ol class="timeline">
+      <li class="reveal">
+        <article class="card job">
+          <div class="job-header">
+            <img class="logo" src="images/ntt_data_inc_logo.jpg" width="64" height="64" alt="" loading="lazy" decoding="async">
+            <div>
+              <h2 class="job-title">Senior Associate DevOps Engineer</h2>
+              <p class="job-company">NTT DATA</p>
+              <p class="job-meta"><time datetime="2023-06">Jun 2023</time> – <time datetime="2024-12">Dec 2024</time> (1 yr 7 mos) · Full-time · Singapore · Hybrid</p>
+            </div>
+          </div>
+          <ul class="checklist">
+            <li>Mentored interns and junior DevOps associates, fostering professional growth.</li>
+            <li>Delivered PoCs for AI Ops including IT Health Check, Root Cause Analysis, and Infrastructure Automation.</li>
+            <li>Developed Kubernetes automation using Intel QuickAssist Technology on Xeon processors to enhance performance.</li>
+            <li>Presented AI Ops and Cloud Security use cases at Goware Expo 2023 &amp; 2024.</li>
+            <li>Handled Cisco compliance using Yang Model with Ansible orchestration.</li>
+          </ul>
+        </article>
+      </li>
+
+      <li class="reveal">
+        <article class="card job">
+          <div class="job-header">
+            <img class="logo" src="images/generation_singapore_logo.jpg" width="64" height="64" alt="" loading="lazy" decoding="async">
+            <div>
+              <h2 class="job-title">Student Intern SGUP-CT Cloud Support and DevOps</h2>
+              <p class="job-company">Generation Singapore</p>
+              <p class="job-meta"><time datetime="2021-03">Mar 2021</time> – <time datetime="2022-01">Jan 2022</time> (11 mos) · Full-time · Singapore</p>
+            </div>
+          </div>
+          <ul class="checklist">
+            <li>Completed a comprehensive 3-month bootcamp followed by a 6-month apprenticeship.</li>
+            <li>Acquired proficiency in Python, Git, Linux, Ansible, Docker, Terraform, Azure, C#, Jenkins, and Agile.</li>
+            <li>Built strong teamwork and problem-solving skills essential for DevOps environments.</li>
+          </ul>
+        </article>
+      </li>
+
+      <li class="reveal">
+        <article class="card job">
+          <div class="job-header">
+            <img class="logo" src="images/singapore_airlines_logo.jpg" width="64" height="64" alt="" loading="lazy" decoding="async">
+            <div>
+              <h2 class="job-title">Flight Attendant</h2>
+              <p class="job-company">Singapore Airlines</p>
+              <p class="job-meta"><time datetime="2012-08">Aug 2012</time> – <time datetime="2021-02">Feb 2021</time> (8 yrs 7 mos) · Full-time · Singapore</p>
+            </div>
+          </div>
+          <ul class="checklist">
+            <li>Brand ambassador delivering high standards, grooming, and medical support.</li>
+            <li>Awarded certificate of performance for A1 service in FY 19/20.</li>
+            <li>Received honorary title for service excellence in Q4 FY 19/20.</li>
+          </ul>
+        </article>
+      </li>
+
+      <li class="reveal">
+        <article class="card job">
+          <div class="job-header">
+            <img class="logo" src="images/shangri_la_hotels_and_resorts_logo.jpg" width="64" height="64" alt="" loading="lazy" decoding="async">
+            <div>
+              <h2 class="job-title">Management Trainee Program</h2>
+              <p class="job-company">Shangri-La Group</p>
+              <p class="job-meta"><time datetime="2010-09">Sep 2010</time> – <time datetime="2012-07">Jul 2012</time> (1 yr 11 mos) · Full-time · Kuala Lumpur, Malaysia</p>
+            </div>
+          </div>
+          <ul class="checklist">
+            <li>Handled recruitment, compliance, and training in Human Resource.</li>
+            <li>Presented financial reports and budgets in the Finance Department.</li>
+          </ul>
+        </article>
+      </li>
+    </ol>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Reuben Chan · DevOps Engineer · Singapore</p>
+    <ul class="contact-links">
+      <li><a class="icon-button" href="mailto:reubenchan2010@hotmail.com" aria-label="Email Reuben">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+      </a></li>
+      <li><a class="icon-button" href="https://www.linkedin.com/in/reubenchanep/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)">
+        <svg class="icon icon--solid" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      </a></li>
+      <li><a class="icon-button" href="https://github.com/ReubenChan" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)">
+        <svg class="icon icon--solid" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a></li>
     </ul>
   </div>
-
-  <div class="experience-card reveal">
-    <img src="./images/singapore_airlines_logo.jpg" class="experience-logo" alt="Singapore Airlines Logo">
-    <div class="experience-title">Flight Attendant</div>
-    <div class="experience-meta">Full-time | Aug 2012 - Feb 2021 (8 yrs 7 mos) · Singapore</div>
-    <ul class="custom-bullets">
-      <li>Brand ambassador delivering high standards, grooming, and medical support.</li>
-      <li>Awarded certificate of performance for A1 service in FY 19/20.</li>
-      <li>Received honorary title for service excellence in Q4 FY 19/20.</li>
-    </ul>
-  </div>
-
-  <div class="experience-card reveal">
-    <img src="./images/shangri_la_hotels_and_resorts_logo.jpg" class="experience-logo" alt="Shangri-La Group Logo">
-    <div class="experience-title">Management Trainee Program</div>
-    <div class="experience-meta">Full-time | Sep 2010 - Jul 2012 (1 yr 11 mos) · Kuala Lumpur, Malaysia</div>
-    <ul class="custom-bullets">
-      <li>Handled recruitment, compliance, and training in Human Resource.</li>
-      <li>Presented financial reports and budgets in the Finance Department.</li>
-    </ul>
-  </div>
-</div>
-
-<!-- Reveal Animation Script -->
-<script>
-  const reveals = document.querySelectorAll('.reveal');
-
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // Reveal once
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
-
-  reveals.forEach(reveal => {
-    revealObserver.observe(reveal);
-  });
-</script>
-
-<script>
-  // Reveal experience cards
-  const cards = document.querySelectorAll('.experience-card');
-  const cardObserver = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  cards.forEach(card => cardObserver.observe(card));
-
-  // Animate section title
-  const title = document.querySelector('.section-title');
-  const titleObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        title.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.5 });
-
-  titleObserver.observe(title);
-</script>
-
+</footer>
 </body>
 </html>
