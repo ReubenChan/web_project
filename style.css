@@ -514,7 +514,6 @@ main { flex: 1; }
 }
 .card-grid > .card > * { margin: 0; }
 .card-grid h2 { font-size: var(--step-1); }
-.card-grid h2 .badge { margin-left: var(--space-1); vertical-align: middle; }
 .card-grid--wide { --card-min: 22rem; }
 
 .card-action { align-self: end; }
